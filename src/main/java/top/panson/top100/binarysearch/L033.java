@@ -1,4 +1,4 @@
-package top.panson.binarysearch;
+package top.panson.top100.binarysearch;
 
 /**
  * @author Panson

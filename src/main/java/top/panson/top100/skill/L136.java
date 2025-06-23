@@ -1,4 +1,4 @@
-package top.panson.skill;
+package top.panson.top100.skill;
 
 /**
  * @author Panson

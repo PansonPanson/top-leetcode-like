@@ -16,6 +16,7 @@ public class L139 {
             boolean[] dp = new boolean[s.length() + 1];
             dp[0] = true;
             for(int i = 1; i <= s.length(); i++) {
+                // 每一次遍历内循环，可以确定dp[i] 是否可被拆分
                 for(int j = 0; j < i; j++) {
                     if(dp[j] && set.contains(s.substring(j, i))) {
                         dp[i] = true;

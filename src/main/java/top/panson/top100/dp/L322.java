@@ -14,7 +14,10 @@ public class L322 {
             // 别用最大值，dp[j - coin] + 1 会溢出
             Arrays.fill(dp, amount + 1);
             dp[0] = 0;
+            // 完全背包：标准模板
+            // “外层遍历物品”、“内层正序遍历容量”
             for(int coin : coins) {
+                // 每次内层循环结束后，确定下来的是：“在仅使用前 x 个硬币的前提下”，dp[i] 表示拼出金额 i 的最少硬币数。
                 for(int j = coin; j <= amount; j++) {
                     dp[j] = Math.min(dp[j], dp[j - coin] + 1);
                 }

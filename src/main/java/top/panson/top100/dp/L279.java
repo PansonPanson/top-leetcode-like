@@ -12,6 +12,7 @@ public class L279 {
             int[] dp = new int[n + 1];
             Arrays.fill(dp, n + 1);
             dp[0] = 0;
+            // 外层遍历物品，内层正序遍历容量
             for(int i = 1; i * i <= n; i++) {
                 int sqr = i * i;
                 for(int j = sqr; j <= n; j++) {

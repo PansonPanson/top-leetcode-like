@@ -38,4 +38,27 @@ public class L416 {
 
         }
     }
+
+
+    public class Solution1 {
+        public boolean canPartition(int[] nums) {
+            int sum = 0;
+            for (int num : nums) sum += num;
+            if (sum % 2 != 0) return false;  // 总和为奇数，不可能平分
+
+            int target = sum / 2;
+            boolean[] dp = new boolean[target + 1];
+            dp[0] = true;
+
+            for (int num : nums) {
+                // 倒序遍历，确保每个数只能用一次（0-1 背包）
+                for (int j = target; j >= num; j--) {
+                    dp[j] = dp[j] || dp[j - num];
+                }
+            }
+
+            return dp[target];
+        }
+    }
+
 }

@@ -21,6 +21,7 @@ public class L763 {
             List<Integer> res = new ArrayList<>();
             int end = 0;
             int start = 0;
+            // 遍历 i 的时候，看看 end 是否到了，end 就是前面遍历的字母出现的最远下标位置
             for(int i = 0; i < s.length(); i++) {
                 char ch = s.charAt(i);
 

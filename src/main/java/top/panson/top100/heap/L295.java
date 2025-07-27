@@ -19,6 +19,7 @@ public class L295 {
             right = new PriorityQueue<>();               // 小顶堆
         }
 
+        // 每一次执行完后，左边的数量都大于等于右边
         public void addNum(int num) {
             // 默认先加到左边（大顶堆）
             left.offer(num);
@@ -40,5 +41,6 @@ public class L295 {
             }
         }
     }
+
 
 }
